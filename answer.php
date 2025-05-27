@@ -32,12 +32,15 @@
         <img src="./images/museum.jpg" alt="Museum" />
       </div>
       <?php
+      // Inputs
       $userAge = $_GET["user-age"];
       $dayOfWeek = $_GET["day-of-week"];
-      if (($dayOfWeek == 'TUE' || $dayOfWeek == 'THU') || ($userAge > 12 && $userAge < 21)) {
-        echo "You are eligible for student pricing!";
+      // Process
+      if (($dayOfWeek == 'Tuesday' || $dayOfWeek == 'Thursday') || ($userAge > 12 && $userAge < 21)) {
+        // Outputs
+        echo "Day of week: " . $dayOfWeek . "</br>Age: " . $userAge . "</br>You are eligible for student pricing!";
       } else {
-        echo "You must pay the regular price.";
+        echo "Day of week: " . $dayOfWeek . "</br>Age: " . $userAge . "</br>You must pay the regular price.";
       }
       ?>
   </div>
